@@ -1,0 +1,43 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>超可爱的星空火箭置顶jquery特效</title>
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:url(images/blog7year_videobg.png);font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+
+/* actGotop */
+.actGotop{position:fixed;_position:absolute;bottom:100px;right:50px;width:150px;height:195px;display:none;}
+.actGotop a,.actGotop a:link{width:150px;height:195px;display:inline-block;background:url(images/blog7year_gotop.png) no-repeat;_background:url(images/blog7year_gotop.gif) no-repeat;outline:none;}
+.actGotop a:hover{background:url(images/blog7year_gotopd.gif) no-repeat;outline:none;}
+</style>
+
+</head>
+
+<body style="height:2000px;">
+
+<div class="actGotop"><a href="javascript:;" title="返回顶部"></a></div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){	
+	$(window).scroll(function() {		
+		if($(window).scrollTop() >= 100){
+			$('.actGotop').fadeIn(300); 
+		}else{    
+			$('.actGotop').fadeOut(300);    
+		}  
+	});
+	$('.actGotop').click(function(){
+	$('html,body').animate({scrollTop: '0px'}, 800);});	
+});
+</script>
+<script src="http://www.jq22.com/js/jq.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1406 @@
+.np-example:after, .continuous-group-container:after, .context-destroy-container:after, .properties-container:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: 'Lato', sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  font-weight: 400; }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  color: #555; }
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden], template {
+  display: none; }
+
+/* Links
+========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code, kbd, pre, samp {
+  font-family: Consolas, "Lucida Console", Monaco, monospace;
+  font-size: 1em; }
+
+/* Forms
+========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"], input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+main {
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: relative; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 32px;
+  line-height: 32px;
+  background: rgba(0, 0, 0, 0.1);
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: right; }
+  footer p {
+    display: inline; }
+  footer .inner, footer main {
+    padding: 0 10px; }
+
+a {
+  color: #348ec0; }
+  a:hover, a:focus {
+    color: #68a42b; }
+
+h2 {
+  margin: 8px 0;
+  color: #348ec0;
+  font-weight: 300;
+  font-size: 32px; }
+
+pre {
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 14px; }
+
+button {
+  display: inline-block;
+  background: #348ec0;
+  color: white;
+  padding: 10px;
+  border: 0; }
+  button:hover, button:focus {
+    background: #68a42b; }
+
+.container {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  padding-bottom: 32px; }
+
+.inner, main {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 660px) {
+  body {
+    background: url(../img/bg.jpg) center 0 no-repeat #fff;
+    background-size: cover;
+    background-attachment: fixed; } }
+
+header {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 16px; }
+  header h1 {
+    margin: 0;
+    padding: 4px 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 36px; }
+    header h1 a, header h1 a:hover, header h1 a:focus {
+      color: #111; }
+  header nav {
+    display: inline-block;
+    font-size: 14px; }
+    header nav ul {
+      padding: 0 0 8px 0;
+      margin: 0; }
+    header nav li {
+      display: inline-block;
+      padding: 0 3px; }
+    header nav a {
+      border-radius: 25px;
+      padding: 5px 10px;
+      color: #555; }
+      header nav a:hover, header nav a:focus {
+        background: rgba(0, 0, 0, 0.1);
+        color: #555; }
+  header a {
+    text-decoration: none;
+    display: block; }
+  header .inner, header main {
+    padding: 0 10px; }
+
+.on-about .nav-about, .on-guides .nav-guides, .on-shortcuts .nav-shortcuts, .on-api .nav-api {
+  background: #348ec0;
+  color: white;
+  cursor: default; }
+
+@media (min-width: 660px) {
+  header {
+    padding-top: 8px; }
+    header nav {
+      float: right;
+      position: relative;
+      top: 18px;
+      font-size: 16px; }
+      header nav a {
+        padding: 5px 12px; }
+  h1 {
+    float: left; } }
+
+.subsection-nav {
+  margin: 0;
+  padding: 0; }
+  .subsection-nav li {
+    display: block; }
+  .subsection-nav a {
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 30px 10px 15px;
+    text-decoration: none;
+    position: relative;
+    display: none; }
+    .subsection-nav a:hover:after, .subsection-nav a:focus:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 15px;
+      background: #348ec0; }
+    .subsection-nav a:hover:after, .subsection-nav a:focus:after {
+      right: 0; }
+  .subsection-nav li:first-child > a {
+    border-top: 0; }
+  .subsection-nav.expanded a {
+    display: block; }
+
+.on-getting-started .nav-getting-started, .on-jquery-zepto .nav-jquery-zepto, .on-adapters .nav-adapters, .on-debugging .nav-debugging, .on-sticky-elements .nav-sticky-elements, .on-infinite-scroll .nav-infinite-scroll, .on-inview .nav-inview, .on-context .nav-context, .on-context-destroy .nav-context-destroy, .on-context-find-by-element .nav-context-find-by-element, .on-context-option .nav-context-option, .on-context-refresh .nav-context-refresh, .on-continuous-option .nav-continuous-option, .on-destroy .nav-destroy, .on-destroy-all .nav-destroy-all, .on-disable .nav-disable, .on-disable-all .nav-disable-all, .on-enable .nav-enable, .on-enable-all .nav-enable-all, .on-enabled-option .nav-enabled-option, .on-first .nav-first, .on-group .nav-group, .on-group-option .nav-group-option, .on-handler-option .nav-handler-option, .on-horizontal-option .nav-horizontal-option, .on-last .nav-last, .on-next .nav-next, .on-offset-option .nav-offset-option, .on-previous .nav-previous, .on-refresh-all .nav-refresh-all, .on-viewport-height .nav-viewport-height, .on-viewport-width .nav-viewport-width, .on-waypoint .nav-waypoint {
+  background: #348ec0;
+  color: #fff;
+  display: block;
+  position: relative; }
+  .on-getting-started .nav-getting-started:before, .on-jquery-zepto .nav-jquery-zepto:before, .on-adapters .nav-adapters:before, .on-debugging .nav-debugging:before, .on-sticky-elements .nav-sticky-elements:before, .on-infinite-scroll .nav-infinite-scroll:before, .on-inview .nav-inview:before, .on-context .nav-context:before, .on-context-destroy .nav-context-destroy:before, .on-context-find-by-element .nav-context-find-by-element:before, .on-context-option .nav-context-option:before, .on-context-refresh .nav-context-refresh:before, .on-continuous-option .nav-continuous-option:before, .on-destroy .nav-destroy:before, .on-destroy-all .nav-destroy-all:before, .on-disable .nav-disable:before, .on-disable-all .nav-disable-all:before, .on-enable .nav-enable:before, .on-enable-all .nav-enable-all:before, .on-enabled-option .nav-enabled-option:before, .on-first .nav-first:before, .on-group .nav-group:before, .on-group-option .nav-group-option:before, .on-handler-option .nav-handler-option:before, .on-horizontal-option .nav-horizontal-option:before, .on-last .nav-last:before, .on-next .nav-next:before, .on-offset-option .nav-offset-option:before, .on-previous .nav-previous:before, .on-refresh-all .nav-refresh-all:before, .on-viewport-height .nav-viewport-height:before, .on-viewport-width .nav-viewport-width:before, .on-waypoint .nav-waypoint:before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff; }
+
+.expanded.on-getting-started .nav-getting-started:before {
+  content: '-'; }
+
+.expanded.on-jquery-zepto .nav-jquery-zepto:before {
+  content: '-'; }
+
+.expanded.on-adapters .nav-adapters:before {
+  content: '-'; }
+
+.expanded.on-debugging .nav-debugging:before {
+  content: '-'; }
+
+.expanded.on-sticky-elements .nav-sticky-elements:before {
+  content: '-'; }
+
+.expanded.on-infinite-scroll .nav-infinite-scroll:before {
+  content: '-'; }
+
+.expanded.on-inview .nav-inview:before {
+  content: '-'; }
+
+.expanded.on-context .nav-context:before {
+  content: '-'; }
+
+.expanded.on-context-destroy .nav-context-destroy:before {
+  content: '-'; }
+
+.expanded.on-context-find-by-element .nav-context-find-by-element:before {
+  content: '-'; }
+
+.expanded.on-context-option .nav-context-option:before {
+  content: '-'; }
+
+.expanded.on-context-refresh .nav-context-refresh:before {
+  content: '-'; }
+
+.expanded.on-continuous-option .nav-continuous-option:before {
+  content: '-'; }
+
+.expanded.on-destroy .nav-destroy:before {
+  content: '-'; }
+
+.expanded.on-destroy-all .nav-destroy-all:before {
+  content: '-'; }
+
+.expanded.on-disable .nav-disable:before {
+  content: '-'; }
+
+.expanded.on-disable-all .nav-disable-all:before {
+  content: '-'; }
+
+.expanded.on-enable .nav-enable:before {
+  content: '-'; }
+
+.expanded.on-enable-all .nav-enable-all:before {
+  content: '-'; }
+
+.expanded.on-enabled-option .nav-enabled-option:before {
+  content: '-'; }
+
+.expanded.on-first .nav-first:before {
+  content: '-'; }
+
+.expanded.on-group .nav-group:before {
+  content: '-'; }
+
+.expanded.on-group-option .nav-group-option:before {
+  content: '-'; }
+
+.expanded.on-handler-option .nav-handler-option:before {
+  content: '-'; }
+
+.expanded.on-horizontal-option .nav-horizontal-option:before {
+  content: '-'; }
+
+.expanded.on-last .nav-last:before {
+  content: '-'; }
+
+.expanded.on-next .nav-next:before {
+  content: '-'; }
+
+.expanded.on-offset-option .nav-offset-option:before {
+  content: '-'; }
+
+.expanded.on-previous .nav-previous:before {
+  content: '-'; }
+
+.expanded.on-refresh-all .nav-refresh-all:before {
+  content: '-'; }
+
+.expanded.on-viewport-height .nav-viewport-height:before {
+  content: '-'; }
+
+.expanded.on-viewport-width .nav-viewport-width:before {
+  content: '-'; }
+
+.expanded.on-waypoint .nav-waypoint:before {
+  content: '-'; }
+
+.api-nav > li {
+  margin-bottom: 16px; }
+.api-nav ul {
+  padding: 0;
+  font-size: 14px; }
+  .api-nav ul a {
+    background: transparent;
+    color: black;
+    padding: 6px 35px 6px 20px; }
+.api-nav .subheading {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+  padding: 6px 30px 6px 15px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  display: none; }
+.api-nav a + .subheading {
+  margin-top: 0; }
+.api-nav.expanded .subheading {
+  display: block; }
+
+@media (min-width: 660px) {
+  .subsection-nav {
+    float: left;
+    width: 185px; }
+    .subsection-nav a, .subsection-nav .subheading {
+      display: block; }
+  .on-getting-started .nav-getting-started {
+    cursor: default; }
+    .on-getting-started .nav-getting-started:before {
+      display: none; }
+  .on-jquery-zepto .nav-jquery-zepto {
+    cursor: default; }
+    .on-jquery-zepto .nav-jquery-zepto:before {
+      display: none; }
+  .on-adapters .nav-adapters {
+    cursor: default; }
+    .on-adapters .nav-adapters:before {
+      display: none; }
+  .on-debugging .nav-debugging {
+    cursor: default; }
+    .on-debugging .nav-debugging:before {
+      display: none; }
+  .on-sticky-elements .nav-sticky-elements {
+    cursor: default; }
+    .on-sticky-elements .nav-sticky-elements:before {
+      display: none; }
+  .on-infinite-scroll .nav-infinite-scroll {
+    cursor: default; }
+    .on-infinite-scroll .nav-infinite-scroll:before {
+      display: none; }
+  .on-inview .nav-inview {
+    cursor: default; }
+    .on-inview .nav-inview:before {
+      display: none; }
+  .on-context .nav-context {
+    cursor: default; }
+    .on-context .nav-context:before {
+      display: none; }
+  .on-context-destroy .nav-context-destroy {
+    cursor: default; }
+    .on-context-destroy .nav-context-destroy:before {
+      display: none; }
+  .on-context-find-by-element .nav-context-find-by-element {
+    cursor: default; }
+    .on-context-find-by-element .nav-context-find-by-element:before {
+      display: none; }
+  .on-context-option .nav-context-option {
+    cursor: default; }
+    .on-context-option .nav-context-option:before {
+      display: none; }
+  .on-context-refresh .nav-context-refresh {
+    cursor: default; }
+    .on-context-refresh .nav-context-refresh:before {
+      display: none; }
+  .on-continuous-option .nav-continuous-option {
+    cursor: default; }
+    .on-continuous-option .nav-continuous-option:before {
+      display: none; }
+  .on-destroy .nav-destroy {
+    cursor: default; }
+    .on-destroy .nav-destroy:before {
+      display: none; }
+  .on-destroy-all .nav-destroy-all {
+    cursor: default; }
+    .on-destroy-all .nav-destroy-all:before {
+      display: none; }
+  .on-disable .nav-disable {
+    cursor: default; }
+    .on-disable .nav-disable:before {
+      display: none; }
+  .on-disable-all .nav-disable-all {
+    cursor: default; }
+    .on-disable-all .nav-disable-all:before {
+      display: none; }
+  .on-enable .nav-enable {
+    cursor: default; }
+    .on-enable .nav-enable:before {
+      display: none; }
+  .on-enable-all .nav-enable-all {
+    cursor: default; }
+    .on-enable-all .nav-enable-all:before {
+      display: none; }
+  .on-enabled-option .nav-enabled-option {
+    cursor: default; }
+    .on-enabled-option .nav-enabled-option:before {
+      display: none; }
+  .on-first .nav-first {
+    cursor: default; }
+    .on-first .nav-first:before {
+      display: none; }
+  .on-group .nav-group {
+    cursor: default; }
+    .on-group .nav-group:before {
+      display: none; }
+  .on-group-option .nav-group-option {
+    cursor: default; }
+    .on-group-option .nav-group-option:before {
+      display: none; }
+  .on-handler-option .nav-handler-option {
+    cursor: default; }
+    .on-handler-option .nav-handler-option:before {
+      display: none; }
+  .on-horizontal-option .nav-horizontal-option {
+    cursor: default; }
+    .on-horizontal-option .nav-horizontal-option:before {
+      display: none; }
+  .on-last .nav-last {
+    cursor: default; }
+    .on-last .nav-last:before {
+      display: none; }
+  .on-next .nav-next {
+    cursor: default; }
+    .on-next .nav-next:before {
+      display: none; }
+  .on-offset-option .nav-offset-option {
+    cursor: default; }
+    .on-offset-option .nav-offset-option:before {
+      display: none; }
+  .on-previous .nav-previous {
+    cursor: default; }
+    .on-previous .nav-previous:before {
+      display: none; }
+  .on-refresh-all .nav-refresh-all {
+    cursor: default; }
+    .on-refresh-all .nav-refresh-all:before {
+      display: none; }
+  .on-viewport-height .nav-viewport-height {
+    cursor: default; }
+    .on-viewport-height .nav-viewport-height:before {
+      display: none; }
+  .on-viewport-width .nav-viewport-width {
+    cursor: default; }
+    .on-viewport-width .nav-viewport-width:before {
+      display: none; }
+  .on-waypoint .nav-waypoint {
+    cursor: default; }
+    .on-waypoint .nav-waypoint:before {
+      display: none; } }
+
+.highlight {
+  background: #272822;
+  color: #f8f8f2; }
+
+.highlight + .highlight {
+  border-top: 1px solid rgba(255, 255, 255, 0.3); }
+
+.highlight pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+.highlight pre code {
+  white-space: pre-wrap;
+  padding: 0; }
+
+.highlight .hll {
+  background-color: #49483e; }
+
+.highlight .c {
+  color: #75715e; }
+
+/* Comment */
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010; }
+
+/* Error */
+.highlight .k {
+  color: #66d9ef; }
+
+/* Keyword */
+.highlight .l {
+  color: #ae81ff; }
+
+/* Literal */
+.highlight .n {
+  color: #f8f8f2; }
+
+/* Name */
+.highlight .o {
+  color: #f92672; }
+
+/* Operator */
+.highlight .p {
+  color: #f8f8f2; }
+
+/* Punctuation */
+.highlight .cm {
+  color: #75715e; }
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #75715e; }
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #75715e; }
+
+/* Comment.Single */
+.highlight .cs {
+  color: #75715e; }
+
+/* Comment.Special */
+.highlight .ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+.highlight .gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+.highlight .kc {
+  color: #66d9ef; }
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #66d9ef; }
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #f92672; }
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #66d9ef; }
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #66d9ef; }
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #66d9ef; }
+
+/* Keyword.Type */
+.highlight .ld {
+  color: #e6db74; }
+
+/* Literal.Date */
+.highlight .m {
+  color: #ae81ff; }
+
+/* Literal.Number */
+.highlight .s {
+  color: #e6db74; }
+
+/* Literal.String */
+.highlight .na {
+  color: #a6e22e; }
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #f8f8f2; }
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #a6e22e; }
+
+/* Name.Class */
+.highlight .no {
+  color: #66d9ef; }
+
+/* Name.Constant */
+.highlight .nd {
+  color: #a6e22e; }
+
+/* Name.Decorator */
+.highlight .ni {
+  color: #f8f8f2; }
+
+/* Name.Entity */
+.highlight .ne {
+  color: #a6e22e; }
+
+/* Name.Exception */
+.highlight .nf {
+  color: #a6e22e; }
+
+/* Name.Function */
+.highlight .nl {
+  color: #f8f8f2; }
+
+/* Name.Label */
+.highlight .nn {
+  color: #f8f8f2; }
+
+/* Name.Namespace */
+.highlight .nx {
+  color: #a6e22e; }
+
+/* Name.Other */
+.highlight .py {
+  color: #f8f8f2; }
+
+/* Name.Property */
+.highlight .nt {
+  color: #f92672; }
+
+/* Name.Tag */
+.highlight .nv {
+  color: #f8f8f2; }
+
+/* Name.Variable */
+.highlight .ow {
+  color: #f92672; }
+
+/* Operator.Word */
+.highlight .w {
+  color: #f8f8f2; }
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #ae81ff; }
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #ae81ff; }
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #ae81ff; }
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #ae81ff; }
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #e6db74; }
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #e6db74; }
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #e6db74; }
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #e6db74; }
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #ae81ff; }
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #e6db74; }
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #e6db74; }
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #e6db74; }
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #e6db74; }
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #e6db74; }
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #e6db74; }
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #f8f8f2; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #f8f8f2; }
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #f8f8f2; }
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #f8f8f2; }
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #ae81ff; }
+
+/* Literal.Number.Integer.Long */
+.waypoint {
+  box-shadow: 0 0 0 5px rgba(104, 164, 43, 0.5); }
+  .waypoint.disabled {
+    box-shadow: 0 0 0 5px rgba(192, 52, 52, 0.5); }
+
+.about-main {
+  text-align: center;
+  padding: 10px; }
+  .about-main .highlight {
+    text-align: left; }
+
+.large-button {
+  display: inline-block;
+  background: #348ec0;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 24px; }
+  .large-button:hover, .large-button:focus {
+    background: #68a42b;
+    color: white; }
+
+.or {
+  color: #999;
+  font-size: 12px;
+  margin: 20px 0; }
+  .or:before, .or:after {
+    content: '-';
+    padding: 0 1px; }
+
+.one-liner {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 8px;
+  padding-bottom: 7px; }
+
+.introduction p:first-child {
+  margin-top: 0; }
+
+.about-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px; }
+  .about-links > li {
+    display: inline-block; }
+  .about-links a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    width: 100px; }
+    .about-links a span {
+      display: block; }
+    .about-links a:hover svg {
+      fill: #68a42b; }
+  .about-links svg {
+    width: 36px;
+    height: 36px;
+    fill: #348ec0; }
+
+.flavor-requirements {
+  list-style: none;
+  padding: 0;
+  display: inline-block; }
+  .flavor-requirements > li {
+    display: inline-block;
+    padding-left: 40px;
+    font-size: 14px;
+    color: #888; }
+    .flavor-requirements > li:first-child {
+      padding-left: 0; }
+  .flavor-requirements span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    color: #555; }
+
+@media (min-width: 660px) {
+  .introduction {
+    float: left;
+    width: 50%;
+    padding-right: 15px;
+    text-align: left; }
+  .download {
+    float: right;
+    width: 50%;
+    padding-left: 15px;
+    padding-top: 54px; } }
+
+.notifications {
+  position: fixed;
+  right: 0;
+  top: 76px;
+  z-index: 2;
+  padding: 0;
+  margin: 0; }
+  .notifications li {
+    background: #68a42b;
+    color: white;
+    max-width: 320px;
+    display: block;
+    position: relative;
+    padding: 6px 10px;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.3); }
+    .notifications li:first-child {
+      border-top: 0; }
+
+article {
+  line-height: 1.5;
+  padding: 10px 10px 10px 10px; }
+  article code {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 2px;
+    font-size: 0.875em; }
+  article pre > code {
+    background: transparent;
+    font-size: 1em; }
+  article h2 {
+    line-height: 1.25; }
+  article h3 {
+    color: #666;
+    font-weight: 300;
+    font-size: 24px; }
+  article ul .highlight {
+    margin: 8px 0; }
+  article > h3, article > h4 {
+    padding-top: 24px; }
+
+@media (min-width: 660px) {
+  article {
+    overflow: hidden;
+    padding-left: 30px;
+    padding-top: 0; }
+    article h2 {
+      margin-top: 0; } }
+
+.reference {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05); }
+  .reference.properties {
+    padding: 1.2em 10px; }
+    .reference.properties h4 {
+      margin: 0;
+      font-weight: normal;
+      font-size: 14px;
+      padding-left: 10px; }
+      .reference.properties h4 a {
+        font-size: 16px;
+        position: relative;
+        left: -10px; }
+      .reference.properties h4 + h4 {
+        margin-top: 4px; }
+    .reference.properties ul {
+      margin: 0; }
+      .reference.properties ul + h4 {
+        margin-top: 4px; }
+  .reference > p {
+    margin: 0.25em 0; }
+  .reference h3 {
+    font-size: 1.25em;
+    margin: 1em 0 0 0;
+    color: #888; }
+    .reference h3:first-child {
+      margin-top: 0; }
+  .reference dt {
+    margin-top: 1em; }
+  .reference dd {
+    margin-left: 30px; }
+
+.scroll-down {
+  height: 700px;
+  height: 50vh;
+  position: relative;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  color: #ccc; }
+  .scroll-down:before, .scroll-down:after {
+    display: block;
+    content: '\2193'; }
+
+.waypoint-button-group {
+  position: relative; }
+
+.button-group {
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.np-container {
+  float: left;
+  width: 50%;
+  list-style: none;
+  padding: 0 0 0 10px; }
+  .np-container:first-child {
+    padding: 0 10px 0 0; }
+  .np-container li {
+    display: block; }
+
+.np-left {
+  height: 100px;
+  margin: 10px 0;
+  background: #555; }
+
+.np-right {
+  height: 231px;
+  margin: 16px 0;
+  background: #aaa; }
+
+.np-current {
+  background: green; }
+
+.np-previous {
+  background: red; }
+
+.np-next {
+  background: blue; }
+
+.continuous-false, .continuous-true, .continuous-group-left, .continuous-group-right, .continuous-mix-true, .continuous-mix-false {
+  height: 80px;
+  background: #555;
+  margin: 15px 0;
+  color: #fff;
+  padding: 10px; }
+
+.continuous-group-column {
+  float: left;
+  width: 50%;
+  padding: 0 0 0 10px; }
+  .continuous-group-column:first-child {
+    padding: 0 10px 0 0; }
+
+.destroy-all-waypoint {
+  height: 100px;
+  background: #555;
+  color: #fff;
+  padding: 10px;
+  margin: 15px 0; }
+
+.added {
+  height: 100px;
+  background: #ccc;
+  padding: 10px;
+  margin: 15px 0; }
+
+.left-context-waypoint, .right-context-waypoint {
+  height: 600px;
+  margin-bottom: 20px;
+  padding: 10px; }
+
+.left-context-waypoint {
+  background: #555;
+  color: #fff; }
+
+.right-context-waypoint {
+  background: #ccc;
+  color: #000; }
+
+.group-odd, .group-even {
+  padding: 10px;
+  height: 100px; }
+
+.group-odd {
+  background: #555;
+  color: #fff;
+  margin: 20px 0; }
+
+.group-even {
+  background: #ccc;
+  color: #000; }
+
+.properties-container .highlight {
+  overflow: hidden; }
+
+.enable-disable-all {
+  height: 100px;
+  background: #ccc;
+  margin: 16px 0; }
+
+#overflow-scroll, #overflow-scroll-offset {
+  overflow: auto;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.1); }
+
+#context-example, #find-by-example {
+  background: #555;
+  color: #fff;
+  height: 400px;
+  padding: 10px;
+  margin-top: 150px; }
+
+#context-example-offset {
+  background: #555;
+  color: #fff;
+  height: 600px;
+  padding: 10px;
+  margin-top: 200px; }
+
+#horizontal-waypoint, #horizontal-waypoint-offset, #handler-horizontal {
+  width: 1000px;
+  height: 100%;
+  padding: 10px;
+  margin-left: 150px;
+  background: #555;
+  color: #fff; }
+
+#refresh-all-waypoint {
+  height: 100px;
+  padding: 10px;
+  background: #555;
+  color: #fff;
+  margin: 15px 0; }
+
+#left-context {
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+  height: 300px;
+  overflow: auto;
+  padding-top: 20px; }
+
+#right-context {
+  float: right;
+  width: 50%;
+  padding-left: 10px;
+  height: 300px;
+  overflow: auto;
+  padding-top: 20px; }
+
+@media (min-width: 660px) {
+  .reference {
+    margin: 1.5em 0; }
+  .properties {
+    float: left;
+    margin: 0 1em 1em 0;
+    min-width: 220px; } }
+
+.stuck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .stuck .highlight {
+    box-shadow: 0 0 0 5px #348ec0; }
+
+.notice {
+  background: rgba(52, 142, 192, 0.1);
+  border: 1px solid rgba(52, 142, 192, 0.1);
+  padding: 13px 15px 13px 60px;
+  position: relative; }
+  .notice:before {
+    content: "i";
+    font-family: serif;
+    background: rgba(52, 142, 192, 0.3);
+    color: #fff;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    margin-top: -15px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.5em; }
+
+.sticky-pad {
+  padding-top: 90px; }
+
+.infinite-container {
+  padding: 10px;
+  margin-top: 32px; }
+  .infinite-container.infinite-loading:after {
+    content: '---Loading---';
+    display: block;
+    background: rgba(52, 142, 192, 0.5);
+    color: #000;
+    padding: 40px 10px;
+    margin-top: 10px;
+    text-align: center; }
+
+.infinite-item {
+  background: #555;
+  color: #fff;
+  padding: 40px 10px;
+  margin-top: 10px; }
+  .infinite-item:first-child {
+    margin-top: 0; }
+
+.infinite-more-link {
+  visibility: hidden; }
+
+@media (min-width: 660px) {
+  .stuck {
+    width: 735px;
+    left: auto;
+    right: auto;
+    padding-left: 0;
+    padding-right: 0; } }
