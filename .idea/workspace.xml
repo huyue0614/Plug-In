@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03777f7f-0607-4d0c-a753-ab48d7498fab" name="Default" comment="js去重排序算法">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="各种UI插件.iws" />
@@ -61,6 +62,7 @@
       <list>
         <option value="$PROJECT_DIR$/轮播插件/1.轮播图.html" />
         <option value="$PROJECT_DIR$/插件.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -75,6 +77,9 @@
     <option name="y" value="-8" />
     <option name="width" value="1378" />
     <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="添加" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -205,7 +210,7 @@
       <updated>1493195905258</updated>
       <workItem from="1493195907130" duration="15852000" />
       <workItem from="1493396052427" duration="1044000" />
-      <workItem from="1523272319072" duration="184000" />
+      <workItem from="1523272319072" duration="405000" />
     </task>
     <task id="LOCAL-00001" summary="js去重排序算法">
       <created>1523272405428</created>
@@ -214,11 +219,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523272405428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="js去重排序算法">
+      <created>1523272506362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523272506362</updated>
+    </task>
+    <task id="LOCAL-00003" summary="js去重排序算法">
+      <created>1523272537460</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523272537460</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17080000" />
+    <option name="totallyTimeSpent" value="17301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -326,6 +345,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
